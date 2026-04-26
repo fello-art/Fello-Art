@@ -1,242 +1,149 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Galería de Arte</title>
+  <title>Galería de Arte</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
+    }
 
-<style>
-body{
-    font-family: Arial;
-    background: linear-gradient(135deg, #134e5e, #71b280);
-    color: white;
-    margin: 0;
-}
+    h1 {
+      margin-top: 30px;
+    }
 
-/* MENÚ */
-nav{
-    background: rgba(0,0,0,0.4);
-    padding: 15px;
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(10px);
-}
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
 
-nav a{
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 15px;
+      width: 250px;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
 
-nav a:hover{
-    color: #ff4d4d;
-}
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-/* SECCIONES */
-section{
-    text-align: center;
-    padding: 40px;
-}
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-/* GALERÍA */
-.galeria{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-/* TARJETAS */
-.card{
-    position: relative;
-    width: 260px;
-    border-radius: 15px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    transition: 0.4s;
-}
-
-.card:hover{
-    transform: scale(1.05);
-}
-
-/* IMAGEN */
-.card img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-/* INFO */
-.overlay{
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.7);
-    width: 100%;
-    transform: translateY(100%);
-    transition: 0.4s;
-    padding: 10px;
-}
-
-.card:hover .overlay{
-    transform: translateY(0);
-}
-
-/* BOTÓN */
-button{
-    background: #ff4d4d;
-    border: none;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover{
-    background: #ff1a1a;
-}
-
-/* MODAL */
-.modal{
-    display: none;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    top: 0;
-    left: 0;
-    text-align: center;
-}
-
-.modal img{
-    margin-top: 50px;
-    max-width: 80%;
-}
-
-.modal span{
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    cursor: pointer;
-}
-</style>
-
+    button {
+      margin: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #ff5f6d;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- MENÚ -->
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#galeria">Galería</a>
-    <a href="#ventas">Ventas</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+  <h1>🎨 Galería de Pinturas</h1>
+  <h3>Artista: Valentin</h3>
 
-<!-- INICIO -->
-<section id="inicio">
-<h1>🎨 Galería de Pinturas</h1>
-<p>Artista: Valentin</p>
+  <h2>Sobre mí</h2>
+  <p>Soy un artista apasionado por la pintura, enfocado en paisajes y naturaleza.</p>
 
-<h2>Sobre mí</h2>
-<p>Soy un artista apasionado por la pintura, enfocado en paisajes y naturaleza.</p>
-</section>
+  <div class="galeria">
 
-<!-- GALERÍA -->
-<section id="galeria">
-<h2>Galería</h2>
-
-<div class="galeria">
-
-<div class="card" onclick="abrirModal('cuadro1.jpeg')">
-    <img src="cuadro1.jpeg">
-    <div class="overlay">
-        <h3>Obra 1</h3>
-        <p>Oleo</p>
+    <div class="card">
+      <img src="cuadro1.jpeg">
+      <h3>Obra 1</h3>
+      <p>Acrílico sobre lienzo</p>
+      <p>2025</p>
     </div>
-</div>
 
-<div class="card" onclick="abrirModal('cuadro2.jpeg')">
-    <img src="cuadro2.jpeg">
-    <div class="overlay">
-        <h3>Obra 2</h3>
-        <p>Óleo</p>
+    <div class="card">
+      <img src="cuadro2.jpeg">
+      <h3>Obra 2</h3>
+      <p>Pintura al óleo</p>
+      <p>2025</p>
     </div>
-</div>
 
-<div class="card" onclick="abrirModal('cuadro3.jpeg')">
-    <img src="cuadro3.jpeg">
-    <div class="overlay">
-        <h3>Obra 3</h3>
-        <p>Acuarela</p>
+    <div class="card">
+      <img src="cuadro3.jpg">
+      <h3>Obra 3</h3>
+      <p>Técnica mixta</p>
+      <p>2025</p>
     </div>
-</div>
 
-</div>
-</section>
-
-<!-- VENTAS -->
-<section id="ventas">
-<h2>🛒 Obras en venta</h2>
-
-<div class="galeria">
-
-<div class="card">
-    <img src="cuadro1.jpeg">
-    <div class="overlay">
-        <h3>$250 USD</h3>
-        <button onclick="comprar()">Comprar</button>
+    <div class="card">
+      <img src="cuadro4.jpg">
+      <h3>Obra 4</h3>
+      <p>Paisaje natural</p>
+      <p>2025</p>
     </div>
-</div>
 
-<div class="card">
-    <img src="cuadro2.jpeg">
-    <div class="overlay">
-        <h3>$200 USD</h3>
-        <button onclick="comprar()">Comprar</button>
+    <div class="card">
+      <img src="cuadro5.jpg">
+      <h3>Obra 5</h3>
+      <p>Arte moderno</p>
+      <p>2025</p>
     </div>
-</div>
 
-</div>
+    <div class="card">
+      <img src="cuadro6.jpg">
+      <h3>Obra 6</h3>
+      <p>Pintura abstracta</p>
+      <p>2025</p>
+    </div>
 
-</section>
+    <div class="card">
+      <img src="cuadro7.jpg">
+      <h3>Obra 7</h3>
+      <p>Arte contemporáneo</p>
+      <p>2025</p>
+    </div>
 
-<!-- CONTACTO -->
-<section id="contacto">
-<h2>Contacto</h2>
+    <div class="card">
+      <img src="cuadro8.jpg">
+      <h3>Obra 8</h3>
+      <p>Naturaleza</p>
+      <p>2025</p>
+    </div>
 
-<p>Email: tuemail@gmail.com</p>
+    <div class="card">
+      <img src="cuadro9.jpg">
+      <h3>Obra 9</h3>
+      <p>Creativo</p>
+      <p>2025</p>
+    </div>
 
-<p>
-<a href="https://instagram.com" target="_blank">
-<button>Instagram</button>
-</a>
-</p>
+    <div class="card">
+      <img src="cuadro10.jpg">
+      <h3>Obra 10</h3>
+      <p>Estilo libre</p>
+      <p>2025</p>
+    </div>
 
-</section>
+    <div class="card">
+      <img src="cuadro11.jpg">
+      <h3>Obra 11</h3>
+      <p>Expresión artística</p>
+      <p>2025</p>
+    </div>
 
-<!-- MODAL -->
-<div id="modal" class="modal">
-<span onclick="cerrarModal()">&times;</span>
-<img id="imgGrande">
-</div>
+  </div>
 
-<script>
-function abrirModal(src){
-    document.getElementById("modal").style.display="block";
-    document.getElementById("imgGrande").src=src;
-}
-
-function cerrarModal(){
-    document.getElementById("modal").style.display="none";
-}
-
-function comprar(){
-    alert("Contáctame por WhatsApp o email para comprar");
-}
-</script>
+  <h2>Contacto</h2>
+  <button>Contáctame</button>
 
 </body>
 </html>
