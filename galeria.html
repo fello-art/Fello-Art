@@ -1,155 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Galería</title>
+    <title>Galería</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:linear-gradient(135deg,#1f4037,#99f2c8);
-color:white;
-text-align:center;
-}
+    <style>
+        body{
+            margin:0;
+            font-family:Arial;
+            background:linear-gradient(135deg,#1f4037,#99f2c8);
+            color:white;
+            text-align:center;
+        }
 
-.menu{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(0,0,0,0.7);
-padding:15px;
-}
+        /* MENÚ */
+        .menu{
+            position:fixed;
+            top:0;
+            width:100%;
+            background:rgba(0,0,0,0.7);
+            padding:15px;
+        }
 
-.menu a{
-color:white;
-margin:0 20px;
-text-decoration:none;
-font-weight:bold;
-}
+        .menu a{
+            color:white;
+            margin:0 20px;
+            text-decoration:none;
+            font-weight:bold;
+        }
 
-.galeria{
-margin-top:100px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
+        /* GALERÍA */
+        .galeria{
+            margin-top:100px;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+        }
 
-.card{
-background:rgba(255,255,255,0.1);
-padding:15px;
-border-radius:15px;
-width:220px;
-}
+        .card{
+            background:rgba(255,255,255,0.1);
+            padding:15px;
+            border-radius:15px;
+            width:220px;
+        }
 
-.card img{
-width:100%;
-border-radius:10px;
-}
+        .card img{
+            width:100%;
+            border-radius:10px;
+        }
 
-button{
-background:#ff6b6b;
-color:white;
-border:none;
-padding:10px;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
-}
-</style>
+        /* BOTÓN */
+        .btn{
+            display:inline-block;
+            margin-top:10px;
+            background:#ff6b6b;
+            color:white;
+            padding:8px 15px;
+            border-radius:8px;
+            text-decoration:none;
+        }
+
+        .btn:hover{
+            background:#ff4b4b;
+        }
+    </style>
 
 </head>
 
 <body>
 
-<div class="menu">
-<a href="index.html">Inicio</a>
-<a href="galeria.html">Galería</a>
-<a href="contacto.html">Contacto</a>
-</div>
+    <!-- MENÚ -->
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
 
-<h1 style="margin-top:100px;">🎨 Galería de Obras</h1>
+    <h1 style="margin-top:100px;">🎨 Galería de Obras</h1>
 
-<div class="galeria">
+    <div class="galeria">
 
-<!-- OBRA 1 -->
-<div class="card">
-<img src="cuadro1.jpeg">
-<p>Obra 1</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
+        <div class="card">
+            <img src="cuadro1.jpeg">
+            <p>Obra 1</p>
+            <a href="contacto.html?obra=Obra 1" class="btn">Me interesa</a>
+        </div>
 
-<!-- OBRA 2 -->
-<div class="card">
-<img src="cuadro2.jpeg">
-<p>Obra 2</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
+        <div class="card">
+            <img src="cuadro2.jpeg">
+            <p>Obra 2</p>
+            <a href="contacto.html?obra=Obra 2" class="btn">Me interesa</a>
+        </div>
 
-<!-- OBRA 3 -->
-<div class="card">
-<img src="cuadro3.jpeg">
-<p>Obra 3</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
+        <div class="card">
+            <img src="cuadro3.jpeg">
+            <p>Obra 3</p>
+            <a href="contacto.html?obra=Obra 3" class="btn">Me interesa</a>
+        </div>
 
-<!-- OBRA 4 -->
-<div class="card">
-<img src="cuadro4.jpeg">
-<p>Obra 4</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
+        <div class="card">
+            <img src="cuadro4.jpeg">
+            <p>Obra 4</p>
+            <a href="contacto.html?obra=Obra 4" class="btn">Me interesa</a>
+        </div>
 
-<!-- OBRA 5 -->
-<div class="card">
-<img src="cuadro5.jpeg">
-<p>Obra 5</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 6 -->
-<div class="card">
-<img src="cuadro6.jpeg">
-<p>Obra 6</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 7 -->
-<div class="card">
-<img src="cuadro7.jpeg">
-<p>Obra 7</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 8 -->
-<div class="card">
-<img src="cuadro8.jpeg">
-<p>Obra 8</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 9 -->
-<div class="card">
-<img src="cuadro9.jpeg">
-<p>Obra 9</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 10 -->
-<div class="card">
-<img src="cuadro10.jpeg">
-<p>Obra 10</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-<!-- OBRA 11 -->
-<div class="card">
-<img src="cuadro11.jpeg">
-<p>Obra 11</p>
-<button onclick="window.location.href='contacto.html'">Me interesa</button>
-</div>
-
-</div>
+    </div>
 
 </body>
 </html>
