@@ -47,50 +47,43 @@
             border-radius:10px;
             cursor:pointer;
         }
-
-        button:hover{
-            background:#ff4b4b;
-        }
     </style>
-
 </head>
 
 <body>
 
-    <!-- MENÚ -->
-    <div class="menu">
-        <a href="index.html">Inicio</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
-    </div>
+<div class="menu">
+    <a href="index.html">Inicio</a>
+    <a href="galeria.html">Galería</a>
+    <a href="contacto.html">Contacto</a>
+</div>
 
-    <div class="formulario">
-        <h1>Contáctame</h1>
+<div class="formulario">
+    <h1>Contáctame</h1>
 
-        <form action="https://formsubmit.co/rosalyhirujo01@gmail.com" method="POST">
+    <form action="https://formsubmit.co/rosalyhirujo01@gmail.com" method="POST">
 
-            <input type="hidden" name="_next" value="https://rosaly-hirujo.github.io/mi-pagina/index.html">
+        <input type="hidden" name="_next" value="https://rosaly-hirujo.github.io/mi-pagina/index.html">
 
-            <input type="text" name="nombre" placeholder="Tu nombre" required><br>
+        <input type="text" name="nombre" placeholder="Tu nombre" required><br>
 
-            <input type="email" name="email" placeholder="Tu correo" required><br>
+        <input type="email" name="email" placeholder="Tu correo" required><br>
 
-            <textarea name="mensaje" placeholder="Tu mensaje"></textarea><br>
+        <textarea name="mensaje" placeholder="Tu mensaje"></textarea><br>
 
-            <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button>
 
-        </form>
-    </div>
+    </form>
+</div>
 
-    <!-- SCRIPT AUTOMÁTICO -->
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const obra = params.get("obra");
+<script>
+const params = new URLSearchParams(window.location.search);
+const obra = params.get("obra");
 
-        if(obra){
-            document.querySelector("textarea").value = "Me interesa " + obra;
-        }
-    </script>
+if(obra){
+    document.querySelector("textarea").value = "Me interesa " + obra;
+}
+</script>
 
 </body>
 </html>
